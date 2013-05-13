@@ -153,13 +153,30 @@
 	<section class="slide">
 		<div>
 		<h2 class="inverted">Questions / Bye!</h2>
+		Thanks to:
+			<ul>
+				<li><a href="http://shwr.me">shwr.me</a></li>
+				<li><a href="http://devopsreactions.tumblr.com/">Devops Reactions</a></li>
+			</ul>
+
+		Slides at: <a href="http://bit.ly/dsi-slides">http://bit.ly/dsi-slides</a>
 		</div>
 	</section>
 
 	<script src="shower/shower.min.js"></script>
-
-
-
+	<script type="text/javascript" src="https://raw.github.com/Remotes/Remotes/master/dist/remotes.ne.min.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load", function(e) {
+			window.remotes = new Remotes("preview");
+			window.remotes.on("tap", function(e) {
+				window.shower._turnNextSlide();
+			}).on("swipe-right", function(e) {
+				window.shower._turnPreviousSlide();
+			}).on("swipe-left", function(e) {{
+				window.shower._turnNextSlide();
+			}});
+		}, false);
+	</script>
 
 	</body>
 </html>
